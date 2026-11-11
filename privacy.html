@@ -23,6 +23,32 @@ p,li,blockquote,h1,h2,h3,h4{word-break:keep-all;text-wrap:pretty}
 .cta .in{align-items:center}
 body>footer{justify-content:center;text-align:center}
 body>footer div{text-align:center !important}
+
+/* polish2: rhythm + micro-interactions */
+.pad{padding:120px 48px}
+.sh{margin-bottom:52px}
+.sh h2 small,.kick{display:flex;align-items:center;gap:8px;margin-bottom:18px;color:#8f9bff;letter-spacing:.18em}
+.sh h2 small:before,.kick:before{content:"";width:22px;height:2px;background:#2b3cf0;display:inline-block}
+.sh h2{letter-spacing:-.04em}
+.post,.pil,.pr,.testi blockquote,.ins a,.chip{transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}
+.post:hover,.pil:hover,.pr:hover,.testi blockquote:hover{transform:translateY(-4px);border-color:#3a3f66;box-shadow:0 18px 44px #0008}
+.ins a:hover{transform:translateY(-4px)}
+.ins a:hover h4{color:#8f9bff}
+.ins a h4{transition:color .25s ease}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease}
+.btn.blue:hover{transform:translateY(-2px);box-shadow:0 10px 26px #2b3cf066}
+.btn.line:hover{background:#fff;color:#000;border-color:#fff}
+.tabs button{transition:color .2s ease,background .2s ease,border-color .2s ease}
+.chip:hover{transform:translateY(-3px);border-color:#ffffff44}
+.testi blockquote{padding-bottom:22px}
+.testi footer{padding-top:16px;margin-top:auto}
+.contacts a{transition:padding-left .25s ease,color .2s ease}
+.contacts a:hover{padding-left:8px}
+.kakao{transition:transform .2s ease,box-shadow .2s ease}
+.kakao:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 34px #0009}
+.proc .pr .n{transition:color .25s ease}
+.pr:hover .n{color:#2b3cf0}
+@media(max-width:900px){.pad{padding:84px 20px}}
 </style></head>
 <body><header><a href="index.html">BRANALL<sup>®</sup></a></header><h1>개인정보처리방침</h1>
 <p>브랜올(이하 '회사')은 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보처리방침을 수립·공개합니다.</p>
