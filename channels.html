@@ -275,8 +275,8 @@ body>footer div{text-align:center !important}
 .chgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 48px 90px}
 .chcard{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;transition:border .25s,transform .25s;align-items:center}
 .chcard:hover{border-color:#4b5bff;transform:translateY(-3px)}
-.chcard .media{border-radius:14px;overflow:hidden;background:#101014;aspect-ratio:9/12}
-.chcard .media video,.chcard .media img{width:100%;height:100%;object-fit:cover;display:block}
+.chcard .media{border-radius:14px;overflow:hidden;background:none}
+.chcard .media video{width:100%;height:100%;object-fit:cover;display:block}.chcard .media img{width:100%;height:auto;display:block}
 .chcard.wide .media{aspect-ratio:16/10}
 .chcard .k{font-family:Archivo,sans-serif;font-size:11px;letter-spacing:.12em;color:#c9ccff;font-weight:700;margin-bottom:8px}
 .chcard h3{font-size:21px;letter-spacing:-.02em;margin-bottom:8px}
@@ -288,7 +288,6 @@ body>footer div{text-align:center !important}
 .grphead h2{font-size:clamp(24px,2.6vw,38px);font-weight:800;letter-spacing:-.03em;margin:8px 0 6px}
 .grphead p{color:var(--mute);font-size:14.5px}
 .chgrid{padding-bottom:40px}
-.chcard .media{aspect-ratio:9/12}
 @media(max-width:900px){.grphead{padding:20px 20px 4px}}
 </style>
 </head><body>
