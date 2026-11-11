@@ -58,24 +58,7 @@ body>footer div{text-align:center !important}
 .proc .pr:nth-child(4),.ins a:nth-child(4),#posts .post:nth-child(4){transition-delay:.3s,.3s,0s,0s}
 #posts .post:nth-child(5){transition-delay:.1s,.1s,0s,0s}
 #posts .post:nth-child(6){transition-delay:.2s,.2s,0s,0s}
-</style><!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2556401924884115');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</head>
+</style></head>
 <body><header><a href="index.html">BRANALL<sup>®</sup></a></header><h1>개인정보처리방침</h1>
 <p>브랜올(이하 '회사')은 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보처리방침을 수립·공개합니다.</p>
 <h2>1. 수집하는 개인정보 항목 및 수집 방법</h2>
@@ -146,7 +129,7 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
   var el=e.target;
   if(el.matches('.pillars,.proc,.testi,.ins,#posts')){el.classList.add('stagger-in');cio.unobserve(el);return;}
   if(!done.has(el)){done.add(el);cu(el);cio.unobserve(el);}
- });},{threshold:.25});
+ });},{threshold:.08});
  document.querySelectorAll('.chip b,.more b').forEach(function(el){cio.observe(el);});
  document.querySelectorAll('.pillars,.proc,.testi,.ins,#posts').forEach(function(el){cio.observe(el);});
 })();
