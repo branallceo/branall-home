@@ -231,7 +231,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .state .sline{display:block;margin-bottom:0;text-wrap:pretty}
 .state .sline:last-child{margin-bottom:0}
 .state .sline.dim{color:#6e6e78}
-@media(max-width:900px){.about .state{font-size:min(3.45vw,15px);line-height:1.85}.state .sline{margin-bottom:0;white-space:nowrap}}
+@media(max-width:900px){.about .state{font-size:clamp(16px,4.6vw,19px);line-height:1.8}.state .sline{margin-bottom:10px;white-space:normal}}
 
 @media(min-width:901px){.about .state{font-size:clamp(20px,1.85vw,29px);line-height:1.75}.state .sline{margin-bottom:0}}
 .panel{grid-template-columns:1fr !important}
@@ -280,6 +280,20 @@ body>footer div{text-align:center !important}
 .proc .pr:nth-child(4),.ins a:nth-child(4),#posts .post:nth-child(4){transition-delay:.3s,.3s,0s,0s}
 #posts .post:nth-child(5){transition-delay:.1s,.1s,0s,0s}
 #posts .post:nth-child(6){transition-delay:.2s,.2s,0s,0s}
+
+/* polish4: hero motion */
+@keyframes wallDrift{0%{transform:rotate(-6deg) translateY(0)}100%{transform:rotate(-6deg) translateY(-46px)}}
+.wall{animation:wallDrift 16s ease-in-out infinite alternate}
+@keyframes riseIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hcopy .eyebrow{animation:riseIn .7s .15s cubic-bezier(.2,.8,.2,1) both}
+.hcopy h1{animation:riseIn .8s .3s cubic-bezier(.2,.8,.2,1) both}
+.hcopy p{animation:riseIn .8s .48s cubic-bezier(.2,.8,.2,1) both}
+.hcopy .hbtns{animation:riseIn .8s .64s cubic-bezier(.2,.8,.2,1) both}
+.chipcol,.hero .chips{animation:riseIn .9s .8s cubic-bezier(.2,.8,.2,1) both}
+.hcopy h1 em{position:relative;overflow:hidden}
+.hcopy h1 em:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#ffffff8c 50%,transparent 70%);transform:translateX(-120%);animation:emSweep 2.6s 1.1s ease both}
+@keyframes emSweep{to{transform:translateX(120%)}}
+@media(prefers-reduced-motion:reduce){.wall,.hcopy .eyebrow,.hcopy h1,.hcopy p,.hcopy .hbtns,.chipcol,.hero .chips{animation:none}}
 </style></head><body>
 <header><a class="logo en" href="#top" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
