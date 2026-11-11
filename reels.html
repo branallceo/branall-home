@@ -291,7 +291,7 @@ body>footer div{text-align:center !important}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script><script>
-const CLIPS=[...Array(10)].map((_,i)=>'influencer-shortform-p3-'+String(i+1).padStart(2,'0')).concat([...Array(10)].map((_,i)=>'influencer-shortform-p4-'+String(i+1).padStart(2,'0')),['instagram-powerpage-p4-01','instagram-explore-p4-01']);
+const CLIPS=[...Array(10)].map((_,i)=>'influencer-shortform-p3-'+String(i+1).padStart(2,'0')).concat([...Array(10)].map((_,i)=>'influencer-shortform-p4-'+String(i+1).padStart(2,'0')));
 
 const M='https://infra.branall.co.kr/motion/';
 const g=document.getElementById('rgrid');
