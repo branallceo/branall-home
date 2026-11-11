@@ -231,7 +231,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .state .sline{display:block;margin-bottom:0;text-wrap:pretty}
 .state .sline:last-child{margin-bottom:0}
 .state .sline.dim{color:#6e6e78}
-@media(max-width:900px){.about .state{font-size:clamp(16px,4.6vw,19px);line-height:1.8}.state .sline{margin-bottom:10px;white-space:normal}}
+@media(max-width:900px){.about .state{font-size:clamp(14px,4.1vw,16px);line-height:1.95}.state .sline{margin-bottom:0;white-space:nowrap}}
 
 @media(min-width:901px){.about .state{font-size:clamp(20px,1.85vw,29px);line-height:1.75}.state .sline{margin-bottom:0}}
 .panel{grid-template-columns:1fr !important}
@@ -294,6 +294,9 @@ body>footer div{text-align:center !important}
 .hcopy h1 em:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#ffffff8c 50%,transparent 70%);transform:translateX(-120%);animation:emSweep 2.6s 1.1s ease both}
 @keyframes emSweep{to{transform:translateX(120%)}}
 @media(prefers-reduced-motion:reduce){.wall,.hcopy .eyebrow,.hcopy h1,.hcopy p,.hcopy .hbtns,.chipcol,.hero .chips{animation:none}}
+
+.mbr{display:none}
+@media(max-width:900px){.mbr{display:inline}}
 </style></head><body>
 <header><a class="logo en" href="#top" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
@@ -318,7 +321,7 @@ body>footer div{text-align:center !important}
  <div class="reveal"><span class="kick">ABOUT BRANALL</span>
   <p class="state"><span class="sline">브랜올은 <b>바이럴을 직접 <span style="white-space:nowrap;color:inherit">집행하는 팀</span></b>입니다.</span>
 <span class="sline dim">기획부터 집행, 결과 보고까지 한 팀이 합니다.</span>
-<span class="sline">파워페이지, 쇼츠 채널, 크리에이터 네트워크를 <br class="dbr">직접 운영하며 브랜드가 <b>피드의 화제</b>가 되도록 만듭니다.</span></p></div>
+<span class="sline">파워페이지, 쇼츠 채널, 크리에이터 네트워크를 <br class="dbr">직접 운영하며 브랜드가 <br class="mbr"><b>피드의 화제</b>가 되도록 만듭니다.</span></p></div>
  <div class="pillars reveal">
   <div class="pil"><div class="no en">01</div><h3>전략<small>THINK STRATEGY</small></h3><p>브랜드의 목표와 타깃에 맞춰 어떤 매체에서, 어떤 이야기로 퍼뜨릴지 설계합니다.</p></div>
   <div class="pil"><div class="no en">02</div><h3>실행<small>BUILD EXECUTION</small></h3><p>직접 운영하는 매체와 검증된 1만 명+ 인플루언서 풀로 콘텐츠를 제작하고 집행합니다.</p></div>
