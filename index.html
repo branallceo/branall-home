@@ -350,6 +350,39 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
 /* 1114: 메인 제목 '브랜드' 강조 글자가 옆 글자보다 위로 뜨던 문제 (overflow:hidden이 기준선을 바꿈) */
 .hcopy h1 em{overflow:visible;clip-path:inset(0 round .08em)}
 </style>
+<style>
+/* 1113d: 자체 문의 양식 */
+#formslot{min-height:0;padding:30px 30px 32px}
+#formslot .fsh{margin:0 0 20px}
+#formslot form.iq[hidden],.iqdone[hidden]{display:none!important}
+#formslot form.iq{background:none;border-radius:0;padding:0;gap:18px}
+form.iq label{position:relative}
+form.iq input,form.iq textarea{color:#111;font-weight:500}
+form.iq input::placeholder,form.iq textarea::placeholder{color:#a3a3ad;font-weight:400}
+form.iq textarea{min-height:120px;line-height:1.6}
+form.iq .iql{display:block;font-size:13px;font-weight:700;color:#44444b;margin-bottom:8px}
+form.iq .iql small{font-weight:500;color:#8a8a92}
+form.iq .pick{gap:8px}
+form.iq .pick label{display:inline-flex;gap:0}
+form.iq .pick input{position:absolute;opacity:0;width:1px;height:1px;padding:0;border:0}
+form.iq .pick span{background:#fafafc;color:#33333a}
+form.iq .pick input:checked+span{background:var(--blue);color:#fff;border-color:var(--blue)}
+form.iq .pick input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+form.iq em{font-style:normal;font-size:12px;font-weight:600;color:#d92d20;min-height:0}
+form.iq em:empty{display:none}
+form.iq .bad input,form.iq .bad textarea{border-color:#d92d20;background:#fff8f7}
+form.iq .iqg em{display:block;margin-top:8px}
+form.iq .iqhp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+form.iq .agree{align-items:flex-start;line-height:1.5}
+form.iq .agree input{margin-top:1px}
+form.iq .agree+em{margin-top:-10px}
+form.iq .iqerr{font-size:13px;font-weight:600;color:#d92d20;background:#fff1f0;border-radius:10px;padding:12px 14px}
+form.iq .btn[disabled]{opacity:.6;cursor:default;transform:none;box-shadow:none}
+.iqdone{color:#111;padding:60px 6px 40px;text-align:center;outline:0}
+.iqdone b{display:block;font-size:24px;letter-spacing:-.02em;margin-bottom:14px}
+.iqdone p{font-size:15px;line-height:1.75;color:#55555e}
+@media(max-width:900px){#formslot{padding:22px 18px 24px}}
+</style>
 </head><body>
 <header><a class="logo en" href="#top" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
@@ -442,7 +475,38 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
    <a href="mailto:contact@branall.co.kr"><b>EMAIL</b><span>contact@branall.co.kr</span></a>
    <a href="https://www.instagram.com/branall_kr/" target="_blank"><b>INSTAGRAM</b><span>@branall_kr →</span></a>
   </div></div>
- <div id="formslot"><h3 class="fsh">문의하기</h3><iframe src="https://tally.so/embed/zEy7kE?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0" title="문의하기"></iframe><script async src="https://tally.so/widgets/embed.js"></script></div></div></section>
+ <div id="formslot"><h3 class="fsh">문의하기</h3><form class="iq" id="iqform" novalidate data-page="main">
+ <div class="fr"><label>성함<input name="name" maxlength="50" autocomplete="name" placeholder="홍길동"><em data-f="name"></em></label><label>회사 / 직책<input name="company" maxlength="100" autocomplete="organization" placeholder="브랜드 / 마케팅 팀장"><em data-f="company"></em></label></div>
+ <div class="fr"><label>이메일<input type="email" name="email" maxlength="120" autocomplete="email" placeholder="example@company.com"><em data-f="email"></em></label><label>연락처<input type="tel" name="phone" maxlength="30" autocomplete="tel" placeholder="010-1234-5678"><em data-f="phone"></em></label></div>
+ <div class="iqg" role="group" aria-labelledby="iqsv"><span class="iql" id="iqsv">관심 서비스 <small>(중복 선택 가능)</small></span><div class="pick"><label><input type="checkbox" name="services" value="consulting"><span>종합컨설팅</span></label><label><input type="checkbox" name="services" value="content"><span>콘텐츠 제작(광고소재 제작)</span></label><label><input type="checkbox" name="services" value="shortform"><span>숏폼 콘텐츠 제작(인스타그램)</span></label><label><input type="checkbox" name="services" value="viral"><span>바이럴 마케팅(2차확산)</span></label></div><em data-f="services"></em></div>
+ <label>프로젝트 개요<textarea name="message" maxlength="3000" placeholder="목표, 예산 범위, 희망 일정 등을 적어 주세요."></textarea><em data-f="message"></em></label>
+ <div class="iqhp" aria-hidden="true"><label>웹사이트<input name="website" tabindex="-1" autocomplete="off"></label></div>
+ <div class="agree"><input type="checkbox" id="iqc" name="consent"><label for="iqc">개인정보 수집 및 이용에 동의합니다. <a href="privacy.html" target="_blank">내용 보기</a></label></div><em data-f="consent"></em>
+ <p class="iqerr" role="alert" hidden></p>
+ <button class="btn blue" type="submit">문의 등록</button>
+</form>
+<div class="iqdone" id="iqdone" hidden tabindex="-1"><b>문의가 접수되었습니다.</b><p>확인 후 남겨 주신 연락처로 답변드리겠습니다.<br>급하신 경우 카카오톡 @브랜올 또는 070-4108-2296으로 연락 주세요.</p></div>
+<script>
+(function(){var f=document.getElementById('iqform');if(!f)return;var API='https://ops.branall.co.kr/api/inquiries',btn=f.querySelector('button[type=submit]'),gen=f.querySelector('.iqerr'),busy=false;
+function val(n){return (f.elements[n].value||'').trim()}
+function show(map,msg){f.querySelectorAll('em[data-f]').forEach(function(e){var t=map[e.getAttribute('data-f')]||'';e.textContent=t;var box=e.closest('label,.iqg');if(box)box.classList.toggle('bad',!!t)});if(msg){gen.textContent=msg;gen.hidden=false}else{gen.hidden=true}}
+f.addEventListener('submit',function(ev){ev.preventDefault();if(busy)return;var sv=[].slice.call(f.querySelectorAll('input[name=services]:checked')).map(function(i){return i.value});
+var d={name:val('name'),company:val('company'),email:val('email'),phone:val('phone'),services:sv,message:val('message')},er={};
+if(!d.name)er.name='성함을 입력해 주세요.';if(!d.company)er.company='회사와 직책을 입력해 주세요.';
+if(!d.email)er.email='이메일을 입력해 주세요.';else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email))er.email='이메일 형식을 확인해 주세요.';
+if(!d.phone)er.phone='연락처를 입력해 주세요.';else if(!/^[0-9+\-\s()]+$/.test(d.phone)||d.phone.replace(/\D/g,'').length<8)er.phone='연락처를 숫자와 하이픈으로 입력해 주세요.';
+if(!sv.length)er.services='관심 서비스를 1개 이상 선택해 주세요.';if(!d.message)er.message='프로젝트 개요를 입력해 주세요.';
+if(!f.elements.consent.checked)er.consent='개인정보 수집 및 이용에 동의해 주세요.';
+var keys=Object.keys(er);if(keys.length){show(er,'입력하지 않은 항목이 있습니다. 표시된 항목을 확인해 주세요.');var first=f.querySelector('[name="'+keys[0]+'"]');if(first)first.focus();return}
+show({},'');d.consent=true;d.page=f.getAttribute('data-page');d.page_url=location.href;if(document.referrer)d.referrer=document.referrer;d.website=f.elements.website.value;
+var sp=new URLSearchParams(location.search),utm={};['source','medium','campaign','term','content'].forEach(function(k){var v=sp.get('utm_'+k);if(v)utm[k]=v});['fbclid','gclid'].forEach(function(k){var v=sp.get(k);if(v)utm[k]=v});if(Object.keys(utm).length)d.utm=utm;
+busy=true;btn.disabled=true;var label=btn.textContent;btn.textContent='보내는 중…';
+fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json().catch(function(){return null}).then(function(j){return{r:r,j:j}})}).then(function(o){
+if(o.r.ok&&o.j&&o.j.ok){f.hidden=true;var done=document.getElementById('iqdone');done.hidden=false;done.focus();if(o.j.id&&!o.j.duplicate&&typeof window.fbq==='function'){try{fbq('track','Lead')}catch(e){}}}
+else{show((o.j&&o.j.fields)||{},(o.j&&o.j.message)||'전송에 실패했습니다. 잠시 뒤 다시 시도해 주세요.')}
+}).catch(function(){show({},'전송에 실패했습니다. 잠시 뒤 다시 시도하시거나 카카오톡 @브랜올 또는 070-4108-2296으로 연락 주세요.')}).then(function(){busy=false;btn.disabled=false;btn.textContent=label})});
+})();
+</script></div></div></section>
 <footer><div><div class="flogo en">BRANALL<sup style="font-size:.4em">®</sup></div>대표 이규태 | 사업자등록번호 115-65-00596<br>인천광역시 연수구 인천타워대로 송도센트로드 B동 3406호<br>TEL 070-4108-2296 | contact@branall.co.kr</div>
 <div style="text-align:right"><a href="privacy.html">개인정보처리방침</a> · <a href="https://www.instagram.com/branall_kr/" target="_blank">Instagram</a> · <a href="https://pf.kakao.com/_QLwxlX" target="_blank">KakaoTalk</a><br>© 2026 BRANALL. All rights reserved.</div></footer>
 
