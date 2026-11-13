@@ -313,7 +313,40 @@ body>footer div{text-align:center !important}
 .why h4{font-size:21px;letter-spacing:-.02em;color:#fff;margin:14px 0 10px}
 .why p{font-size:15px;line-height:1.7;color:#b4b4bc}
 @media(max-width:900px){.why{grid-template-columns:1fr}}
-</style></head><body>
+</style><style>
+/* 1113b: client grid row height, insight title wrap, faq */
+.clients>div{min-height:0;overflow:hidden}
+.ins h4{text-wrap:balance}
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 4px;font-size:20px;font-weight:700;letter-spacing:-.02em;transition:color .2s ease}
+.faq summary{text-wrap:balance}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";flex:0 0 36px;height:36px;border-radius:50%;border:1px solid #3a3a42;display:grid;place-items:center;font-size:20px;font-weight:500;line-height:1;color:#fff;transition:transform .25s ease,background .2s ease,border-color .2s ease}
+.faq details[open] summary:after{transform:rotate(45deg);background:var(--blue);border-color:var(--blue)}
+.faq summary:hover{color:#c9ccff}
+.faq details p{padding:0 64px 28px 4px;font-size:16px;line-height:1.75;color:#b4b4bc;max-width:900px}
+@media(max-width:900px){.faq summary{font-size:17px;padding:20px 2px;gap:16px}.faq summary:after{flex-basis:30px;height:30px;font-size:17px}.faq details p{padding:0 2px 22px;font-size:15px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"최소 예산이 정해져 있나요?","acceptedAnswer":{"@type":"Answer","text":"매체와 진행 규모에 따라 달라집니다. 인스타그램 파워페이지는 1건부터, X 체험단 시딩은 5인부터처럼 매체마다 진행 단위가 다릅니다. 목표와 예산을 알려주시면 맞는 조합과 비용을 상담 때 안내드립니다."}},{"@type":"Question","name":"어떤 매체로 진행할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"인스타그램 파워페이지, 유머·돋보기 페이지, 유튜브 쇼츠, X 대형채널 RT, 인플루언서 숏폼, X 체험단 시딩, 네이버 체험단, 샤오홍슈를 진행합니다. 개별 캠페인 계약과 전체 캠페인 계약 모두 가능합니다."}},{"@type":"Question","name":"진행 기간은 얼마나 걸리나요?","acceptedAnswer":{"@type":"Answer","text":"매체에 따라 다릅니다. 인플루언서 숏폼은 캠페인 2주 내 완료를 기준으로 진행하고, 유튜브 쇼츠는 최소 3개월 게시를 보장합니다. 원하시는 일정이 있다면 상담 때 알려주세요."}},{"@type":"Question","name":"콘텐츠 제작만 맡길 수도 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. SNS 카드뉴스, 바이럴 숏폼, 촬영·편집 소재는 발행 없이 제작해 납품합니다. 브랜올 채널 집행과 묶으면 제작부터 배포까지 한 번에 진행됩니다."}},{"@type":"Question","name":"인플루언서를 직접 고를 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 1~1.5배수로 리스트업해 제안드리고 브랜드가 직접 선택합니다. 샤오홍슈는 2배수 후보군을 제안합니다."}},{"@type":"Question","name":"결과는 어떻게 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"캠페인이 끝나면 조회수, 반응, 검색량 변화를 숫자로 정리한 리포트를 드립니다. 수치는 각 매체 인사이트 기준으로 집계하며, 샤오홍슈는 구글 시트로 진행 상황을 실시간 공유합니다."}}]}</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2556401924884115');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head><body>
 <header><a class="logo en" href="#top" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
 <div class="hright"><a class="btn blue" href="#contact">상담 신청</a><button class="burger" aria-label="메뉴 열기" onclick="document.body.classList.toggle('mopen')"><i></i><i></i></button></div></header>
@@ -385,6 +418,16 @@ body>footer div{text-align:center !important}
  <a href="https://blog.branall.co.kr/post/cardnews-2611-pepero"><img loading="lazy" decoding="async" class="thumb" src="https://static.wixstatic.com/media/070df9_659eb05a0e8a4c78a5f4720e4111fd23~mv2.png/v1/fill/w_800,h_450,al_c,q_85/i.jpg" alt=""><span>트렌드</span><h4>해외 매출이 국내를 넘었다? 빼빼로데이 '기념일 수출' 전략</h4><i>읽어보기 →</i></a>
  <a href="https://blog.branall.co.kr/post/reels-2611-w2-away-johnsummit"><img loading="lazy" decoding="async" class="thumb" src="img/insight-away-16x9.jpg" alt=""><span>캠페인 노트</span><h4>불만 고객을 '파괴 책임자'로 채용했다? Away×존 서밋 캠페인</h4><i>읽어보기 →</i></a>
  
+ </div></section>
+
+<section class="pad" id="faq" style="padding-top:0"><div class="sh reveal"><h2><small>FAQ</small>자주 묻는 질문</h2><a class="btn line" href="#contact">더 궁금한 점 문의하기 →</a></div>
+ <div class="faq reveal">
+  <details open><summary>최소 예산이 정해져 있나요?</summary><p>매체와 진행 규모에 따라 달라집니다. 인스타그램 파워페이지는 1건부터, X 체험단 시딩은 5인부터처럼 매체마다 진행 단위가 다릅니다. 목표와 예산을 알려주시면 맞는 조합과 비용을 상담 때 안내드립니다.</p></details>
+  <details><summary>어떤 매체로 진행할 수 있나요?</summary><p>인스타그램 파워페이지, 유머·돋보기 페이지, 유튜브 쇼츠, X 대형채널 RT, 인플루언서 숏폼, X 체험단 시딩, 네이버 체험단, 샤오홍슈를 진행합니다. 개별 캠페인 계약과 전체 캠페인 계약 모두 가능합니다.</p></details>
+  <details><summary>진행 기간은 얼마나 걸리나요?</summary><p>매체에 따라 다릅니다. 인플루언서 숏폼은 캠페인 2주 내 완료를 기준으로 진행하고, 유튜브 쇼츠는 최소 3개월 게시를 보장합니다. 원하시는 일정이 있다면 상담 때 알려주세요.</p></details>
+  <details><summary>콘텐츠 제작만 맡길 수도 있나요?</summary><p>네. SNS 카드뉴스, 바이럴 숏폼, 촬영·편집 소재는 발행 없이 제작해 납품합니다. 브랜올 채널 집행과 묶으면 제작부터 배포까지 한 번에 진행됩니다.</p></details>
+  <details><summary>인플루언서를 직접 고를 수 있나요?</summary><p>네. 1~1.5배수로 리스트업해 제안드리고 브랜드가 직접 선택합니다. 샤오홍슈는 2배수 후보군을 제안합니다.</p></details>
+  <details><summary>결과는 어떻게 확인하나요?</summary><p>캠페인이 끝나면 조회수, 반응, 검색량 변화를 숫자로 정리한 리포트를 드립니다. 수치는 각 매체 인사이트 기준으로 집계하며, 샤오홍슈는 구글 시트로 진행 상황을 실시간 공유합니다.</p></details>
  </div></section>
 
 <section class="cta" id="contact"><div class="in">
