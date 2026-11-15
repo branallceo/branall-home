@@ -328,6 +328,29 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
 /* 1114: 줄마다 칸 크기를 같게 (가장 긴 줄 7칸 기준) */
 @media(min-width:901px){.refrow.g7{display:grid;grid-template-columns:repeat(7,minmax(0,var(--w)))}}
 </style>
+<style>
+/* 1115: 조회·노출 50만 이상 게시물, 방문형 노트 예시 */
+.reftoph{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:38px 0 14px;font-size:17px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.reftoph small{font-size:12px;font-weight:500;color:#8a8a94}
+.reftop{display:grid;gap:12px;grid-template-columns:repeat(var(--n),minmax(0,var(--w)))}
+.reftop figure{margin:0;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#101014}
+.reftop figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar);object-fit:cover}
+.reftop figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 10px 9px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.86));color:#fff;line-height:1.25;text-align:left}
+.reftop figcaption b{display:block;font-size:17px;font-weight:800;letter-spacing:-.02em}
+.reftop figcaption span{display:block;font-size:11px;color:#d6d6de;overflow-wrap:anywhere;word-break:keep-all}
+.reftop .rtchip{right:auto;width:auto;max-width:none;height:auto;display:inline-block;margin:0;border:0;position:absolute;left:8px;top:8px;font-size:10px;font-weight:700;line-height:1;padding:5px 7px;border-radius:999px;background:rgba(0,0,0,.62);color:#fff}
+.reftopn{margin:14px 0 0;font-size:12px;color:#6e6e78}
+.reftop .visit{grid-column:span 4;border:1px solid var(--line);border-radius:14px;background:#101014;padding:26px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.reftop .visit h4{margin:0;font-size:19px;font-weight:700;line-height:1.4;color:#fff;letter-spacing:-.01em;text-wrap:balance}
+.reftop .visit ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.reftop .visit li{position:relative;padding-left:14px;font-size:14px;line-height:1.55;color:#c9c9d2}
+.reftop .visit li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:#2f6bff}
+.reftop .visit p{margin:0;font-size:12px;color:#8a8a94}
+@media(min-width:901px) and (max-width:1199px){.reftop.n10{--n:5!important}}
+@media(max-width:900px){.reftop{display:flex;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px;scroll-snap-type:x proximity}.reftop::-webkit-scrollbar{display:none}.reftop figure{flex:0 0 auto;scroll-snap-align:start}.reftop figure img{height:230px;width:auto}.reftop .visit{flex:0 0 78vw;padding:20px}.reftop .visit h4{font-size:16px}.reftop .visit li{font-size:13px}}
+@media(max-width:1199px){.reftop.v3{display:grid;grid-template-columns:repeat(3,minmax(0,218px));margin:0;padding:0;overflow:visible}.reftop.v3 .visit{grid-column:1/-1;flex:none}.reftop.v3 figure img{width:100%;height:auto}}
+@media(max-width:900px){.reftop.v3{grid-template-columns:repeat(3,1fr);gap:8px}.reftop.v3 figcaption{padding:22px 8px 7px}.reftop.v3 figcaption b{font-size:13px}.reftop.v3 figcaption span{display:none}.reftop.v3 .rtchip{left:6px;top:6px;font-size:9px;padding:4px 6px}}
+</style>
 </head><body>
 <header><a class="logo en" href="index.html" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html" style="color:#fff">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
@@ -350,6 +373,7 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
  <span class="sh2k">REFERENCE</span><h2 class="sh2">실제 집행 콘텐츠</h2>
  <p class="sh2sub">브랜올이 샤오홍슈 채널에서 실제 집행한 콘텐츠입니다.</p>
  <div class="refrows reveal in"><div class="refrow g7" style="--ar:420/560;--w:218px"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-n1.jpg" width="720" height="960" alt="샤오홍슈 집행 노트 (얼굴·브랜드 가림)"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-n2.jpg" width="720" height="960" alt="샤오홍슈 집행 노트 (얼굴·브랜드 가림)"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-a1.jpg?v=2" width="420" height="560" alt="샤오홍슈 집행 사례 1"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-a2.jpg?v=2" width="420" height="560" alt="샤오홍슈 집행 사례 2"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-a3.jpg?v=2" width="420" height="560" alt="샤오홍슈 집행 사례 3"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-a4.jpg" width="420" height="560" alt="샤오홍슈 집행 사례 4"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-a5.jpg" width="420" height="559" alt="샤오홍슈 집행 사례 5"></div><div class="refrow g7" style="--ar:420/560;--w:218px"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-b1.jpg" width="420" height="560" alt="샤오홍슈 집행 사례 6"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-b2.jpg" width="420" height="560" alt="샤오홍슈 집행 사례 7"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-b3.jpg" width="420" height="560" alt="샤오홍슈 집행 사례 8"><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-b4.jpg?v=2" width="420" height="560" alt="샤오홍슈 집행 사례 9"></div></div>
+<h3 class="reftoph">방문형 노트 예시<small>F&amp;B 매장 · 2026년 9~10월 게시</small></h3><div class="reftop v3 reveal in" style="--n:7;--w:218px;--ar:420/560"><figure><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-v1.jpg" width="600" height="800" alt="샤오홍슈 방문형 노트, 송도 훠궈 매장 방문기 영상"><span class="rtchip">영상 노트</span><figcaption><b>매장 방문기</b><span>가격까지 적은 후기형</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-v2.jpg" width="600" height="800" alt="샤오홍슈 방문형 노트, 매장 전경과 메뉴 이미지 (간판 일부 가림)"><span class="rtchip">이미지 노트</span><figcaption><b>매장 전경</b><span>입구부터 상차림까지</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="img/chref-xiaohongshu-v3.jpg" width="600" height="800" alt="샤오홍슈 방문형 노트, 훠궈 클로즈업 영상"><span class="rtchip">영상 노트</span><figcaption><b>메뉴 클로즈업</b><span>한 장면으로 보여 주는 맛</span></figcaption></figure><div class="visit"><h4>한국 여행 전에 검색되는 매장 노트는 이렇게 만듭니다</h4><ul><li>세 노트 모두 본문에 매장 주소를 적어, 지도 검색으로 바로 이어지게 했습니다.</li><li>인천 맛집 탐방, 송도 맛집, 한국 여행처럼 여행 전에 찾는 해시태그를 달았습니다.</li><li>두 사람 기준 가격까지 적은 후기형 노트가 셋 중 저장이 가장 많았습니다.</li></ul><p>인천 송도 훠궈 매장 · 이미지 노트 1건, 영상 노트 2건</p></div></div>
 </section>
 <section class="secpad">
  <span class="sh2k">WORKFLOW</span><h2 class="sh2">업무 진행 프로세스</h2>
