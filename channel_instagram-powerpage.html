@@ -34,7 +34,7 @@ nav.main a{opacity:.75;transition:.2s}nav.main a:hover{opacity:1}
 .burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid #ffffff33;background:transparent;cursor:pointer;position:relative}
 .burger i{position:absolute;left:13px;right:13px;height:2px;background:#fff;transition:.25s}.burger i:nth-child(1){top:17px}.burger i:nth-child(2){top:25px}
 body.mopen .burger i:nth-child(1){top:21px;transform:rotate(45deg)}body.mopen .burger i:nth-child(2){top:21px;transform:rotate(-45deg)}
-.mmenu{position:fixed;inset:0;z-index:45;background:#0b0b0d;padding:110px 24px 40px;display:flex;flex-direction:column;gap:6px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.mmenu{position:fixed;inset:0;z-index:45;overflow-y:auto;background:#0b0b0d;padding:110px 24px 40px;display:flex;flex-direction:column;gap:6px;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 body.mopen .mmenu{transform:none}
 .mmenu a.m{font-size:34px;font-weight:800;letter-spacing:-.03em;padding:12px 0;border-bottom:1px solid var(--line)}
 .mmenu .mc{margin-top:auto;display:grid;gap:10px;font-size:15px;color:#c8c8cc}
@@ -324,6 +324,29 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
 .chhero .media img{height:auto}
 @media(max-width:900px){.refrow{overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px;scroll-snap-type:x proximity}.refrow::-webkit-scrollbar{display:none}.refrow img{flex:0 0 auto;width:auto;max-width:none;height:200px;scroll-snap-align:start}}
 </style>
+<style>
+/* 1115: 조회·노출 50만 이상 게시물, 방문형 노트 예시 */
+.reftoph{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:38px 0 14px;font-size:17px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.reftoph small{font-size:12px;font-weight:500;color:#8a8a94}
+.reftop{display:grid;gap:12px;grid-template-columns:repeat(var(--n),minmax(0,var(--w)))}
+.reftop figure{margin:0;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#101014}
+.reftop figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar);object-fit:cover}
+.reftop figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 10px 9px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.86));color:#fff;line-height:1.25;text-align:left}
+.reftop figcaption b{display:block;font-size:17px;font-weight:800;letter-spacing:-.02em}
+.reftop figcaption span{display:block;font-size:11px;color:#d6d6de;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reftop .rtchip{right:auto;width:auto;max-width:none;height:auto;display:inline-block;margin:0;border:0;position:absolute;left:8px;top:8px;font-size:10px;font-weight:700;line-height:1;padding:5px 7px;border-radius:999px;background:rgba(0,0,0,.62);color:#fff}
+.reftopn{margin:14px 0 0;font-size:12px;color:#6e6e78}
+.reftop .visit{grid-column:span 4;border:1px solid var(--line);border-radius:14px;background:#101014;padding:26px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.reftop .visit h4{margin:0;font-size:19px;font-weight:700;line-height:1.4;color:#fff;letter-spacing:-.01em;text-wrap:balance}
+.reftop .visit ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.reftop .visit li{position:relative;padding-left:14px;font-size:14px;line-height:1.55;color:#c9c9d2}
+.reftop .visit li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:#2f6bff}
+.reftop .visit p{margin:0;font-size:12px;color:#8a8a94}
+@media(min-width:901px) and (max-width:1199px){.reftop.n10{--n:5}}
+@media(max-width:900px){.reftop{display:flex;overflow-x:auto;scrollbar-width:none;margin:0 -20px;padding:0 20px;scroll-snap-type:x proximity}.reftop::-webkit-scrollbar{display:none}.reftop figure{flex:0 0 auto;scroll-snap-align:start}.reftop figure img{height:230px;width:auto}.reftop .visit{flex:0 0 78vw;padding:20px}.reftop .visit h4{font-size:16px}.reftop .visit li{font-size:13px}}
+@media(max-width:1199px){.reftop.v3{display:grid;grid-template-columns:repeat(3,minmax(0,218px));margin:0;padding:0;overflow:visible}.reftop.v3 .visit{grid-column:1/-1;flex:none}.reftop.v3 figure img{width:100%;height:auto}}
+@media(max-width:900px){.reftop.v3{grid-template-columns:repeat(3,1fr);gap:8px}.reftop.v3 figcaption{padding:22px 8px 7px}.reftop.v3 figcaption b{font-size:13px}.reftop.v3 figcaption span{display:none}.reftop.v3 .rtchip{left:6px;top:6px;font-size:9px;padding:4px 6px}}
+</style>
 </head><body>
 <header><a class="logo en" href="index.html" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html" style="color:#fff">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
@@ -346,6 +369,7 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
  <span class="sh2k">REFERENCE</span><h2 class="sh2">실제 집행 콘텐츠</h2>
  <p class="sh2sub">브랜올이 인스타그램 파워페이지 채널에서 실제 집행한 콘텐츠입니다.</p>
  <div class="refrows reveal in"><div class="refrow" style="--ar:480/600;--w:232px"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-a1.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 1"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-a2.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 2"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-a3.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 3"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-a4.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 4"></div><div class="refrow" style="--ar:480/600;--w:232px"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-b1.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 5"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-b2.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 6"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-b3.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 7"><img loading="lazy" decoding="async" src="img/chref-instagram-powerpage-b4.jpg" width="480" height="600" alt="인스타그램 파워페이지 집행 사례 8"></div></div>
+<h3 class="reftoph">노출 50만 이상 게시물<small>게재보고 기준 · 5건</small></h3><div class="reftop reveal in" style="--n:5;--w:232px;--ar:480/600"><figure><img loading="lazy" decoding="async" src="img/chtop-instagram-powerpage-1.jpg" width="480" height="600" alt="두끼 파워페이지 릴스, 노출 167만"><span class="rtchip">릴스 노출</span><figcaption><b>167만</b><span>두끼 · 20대 뭐 하지?</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="img/chtop-instagram-powerpage-2.jpg" width="480" height="600" alt="쿠우쿠우 파워페이지 릴스, 노출 89.1만"><span class="rtchip">릴스 노출</span><figcaption><b>89.1만</b><span>쿠우쿠우 · 서울에서 뭐 하지?</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="img/chtop-instagram-powerpage-3.jpg" width="480" height="600" alt="쿠우쿠우 파워페이지 릴스, 노출 57.6만"><span class="rtchip">릴스 노출</span><figcaption><b>57.6만</b><span>쿠우쿠우 · 서울을 즐겨라</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="img/chtop-instagram-powerpage-4.jpg" width="480" height="600" alt="쿠우쿠우 파워페이지 릴스, 노출 55.5만"><span class="rtchip">릴스 노출</span><figcaption><b>55.5만</b><span>쿠우쿠우 · 강남·잠실·성수에서 뭐 하지?</span></figcaption></figure><figure><img loading="lazy" decoding="async" src="img/chtop-instagram-powerpage-5.jpg" width="480" height="600" alt="두끼 파워페이지 릴스, 노출 50.4만"><span class="rtchip">릴스 노출</span><figcaption><b>50.4만</b><span>두끼 · 20대 뭐 하지?</span></figcaption></figure></div><p class="reftopn">* 수치는 게재보고 시점의 매체 인사이트 기준 자체 집계이며, 결과는 캠페인마다 다릅니다.</p>
 </section>
 <section class="secpad">
  <span class="sh2k">WORKFLOW</span><h2 class="sh2">업무 진행 프로세스</h2>
