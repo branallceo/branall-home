@@ -419,7 +419,7 @@ form.iq .btn[disabled]{opacity:.6;cursor:default;transform:none;box-shadow:none}
 <section class="pad" id="ref" style="padding-top:20px"><div class="sh reveal"><h2><small>REFERENCE</small>숫자로 남은 브랜올의 피드</h2>
  <div class="filters" id="filters"><button class="on" data-f="all">전체</button><button data-f="BEAUTY">뷰티</button><button data-f="F&B">F&amp;B</button><button data-f="LIFESTYLE">라이프스타일</button></div></div>
  <div class="posts collapsed" id="posts"></div>
- <p style="font-size:12px;color:#6c6c76;margin:18px 0 8px">* 성과 수치는 캠페인 당시 각 매체 인사이트(조회수·검색량 등) 기준 자체 집계이며, 사례별 매체는 카드에 표기되어 있습니다.</p>
+ <p style="font-size:12px;color:#6c6c76;margin:18px 0 8px">* 성과 수치는 캠페인 당시 각 매체 인사이트(조회수·노출·검색량 등) 기준 자체 집계이며, 사례별 매체는 카드에 표기되어 있습니다.</p>
  <div class="moreref"><button class="btn blue" id="moreBtn">레퍼런스 더 보기 +6</button><a class="btn line" href="reference.html">전체 레퍼런스 →</a></div></section>
 
 <section class="pad" id="clients" style="padding-top:20px"><div class="sh reveal"><h2><small>CLIENTS</small>매년 200개+ 브랜드가 브랜올과 함께합니다</h2><p style="color:var(--mute);font-size:16px;max-width:400px;line-height:1.65">뷰티부터 F&amp;B 프랜차이즈, 라이프스타일, 주류, 플랫폼까지. 다양한 업종의 브랜드와 피드의 화제를 만들어 왔습니다.</p></div>
@@ -546,8 +546,17 @@ const CASES=[
  {b:'하이푸 풀라',c:'LIFESTYLE',img:'https://infra.branall.co.kr/home/img/eoa-hifu.jpg',m:'103만회',ms:'SNS 콘텐츠 조회수',cap:'<b>뷰티 디바이스</b> 바이럴 캠페인',logo:''},
  {b:'요거트퍼플',c:'F&B',img:'cb9467_9eb96ce5ca444bc09d70d17bb63ff164',m:'검색량 +45%',ms:'월 6,780건 → 9,850건',cap:'<b>브랜드 인지도</b> 캠페인',logo:''},
  {b:'다비치렌즈',c:'LIFESTYLE',img:'cb9467_819782adb18e43209638ec862aa44497',m:'1·4·5위',ms:'네이버 "렌즈추천"',cap:'마이피픈과 함께한 <b>네이버 SEO</b> · "투명렌즈" 1·3위',logo:'cb9467_bbec9fcb57b047448d0f38acce4bfb0c'},
- {b:'CHARAN',c:'LIFESTYLE',img:'https://infra.branall.co.kr/home/img/charan-app.jpg',m:'2,300명',ms:'인크레멘탈 신규 가입',cap:'<b>앱 설치·신규 가입</b> 캠페인',logo:''}];
-const CSLUG=["biodance","lapita","blithe","bose","myungrang","cellfusionc","unpa","cheonggiwa","hifu","yogurtpurple","davich","charan"];
+ {b:'CHARAN',c:'LIFESTYLE',img:'https://infra.branall.co.kr/home/img/charan-app.jpg',m:'2,300명',ms:'인크레멘탈 신규 가입',cap:'<b>앱 설치·신규 가입</b> 캠페인',logo:''},
+ {b:'더랩바이블랑두',c:'BEAUTY',img:'https://www.branall.co.kr/img/ref-thelab.jpg',m:'1,509만회',ms:'인스타그램·X 콘텐츠 노출',cap:'<b>다이소 라인</b> 바이럴 캠페인',logo:''},
+ {b:'두끼',c:'F&B',img:'https://www.branall.co.kr/img/ref-dookki.jpg',m:'1,112만회',ms:'인스타그램 릴스·피드 노출',cap:'<b>시즌 메뉴</b> 바이럴 캠페인',logo:''},
+ {b:'쿠우쿠우',c:'F&B',img:'https://www.branall.co.kr/img/ref-qooqoo.jpg',m:'389만회',ms:'인스타그램 릴스·피드 노출',cap:'<b>블루레일</b> 바이럴 캠페인',logo:''},
+ {b:'디어달리아',c:'BEAUTY',img:'https://www.branall.co.kr/img/ref-deardahlia.jpg',m:'320만회',ms:'인스타그램 콘텐츠 노출',cap:'<b>돋보기페이지</b> 바이럴 캠페인',logo:''},
+ {b:'충만치킨',c:'F&B',img:'https://www.branall.co.kr/img/ref-chungman.jpg',m:'216만회',ms:'인스타그램 콘텐츠 노출',cap:'<b>콘텐츠 제작·배포</b> 캠페인',logo:''},
+ {b:'도문장감자탕',c:'F&B',img:'https://www.branall.co.kr/img/ref-domunjang.jpg',m:'204만회',ms:'릴스 중심 콘텐츠 노출',cap:'<b>릴스</b> 바이럴 캠페인',logo:''},
+ {b:'올라플렉스 · 클린',c:'BEAUTY',img:'https://www.branall.co.kr/img/ref-olaplex-clean.jpg',m:'160만회',ms:'인스타그램 콘텐츠 노출',cap:'<b>돋보기페이지</b> 바이럴 캠페인',logo:''},
+ {b:'닥터디퍼런트',c:'BEAUTY',img:'https://www.branall.co.kr/img/ref-drdifferent.jpg',m:'135만회',ms:'인스타그램 콘텐츠 노출',cap:'<b>올리브영</b> 바이럴 캠페인',logo:''},
+ {b:'멘야마쯔리',c:'F&B',img:'https://www.branall.co.kr/img/ref-menya.jpg',m:'75.5만회',ms:'인스타그램 릴스·피드 노출',cap:'<b>릴스·피드</b> 바이럴 캠페인',logo:''}];
+const CSLUG=["biodance","lapita","blithe","bose","myungrang","cellfusionc","unpa","cheonggiwa","hifu","yogurtpurple","davich","charan","thelab","dookki","qooqoo","deardahlia","chungman","domunjang","olaplex-clean","drdifferent","menya"];
 const postsEl=document.getElementById('posts');
 postsEl.innerHTML=CASES.map((c,i)=>`<article class="post reveal ${i>5?'extra':''}" data-c="${c.c}" style="cursor:pointer" onclick="location.href='case-'+CSLUG[${i}]+'.html'"><div class="ph"><div class="av">${c.logo?`<img loading="lazy" decoding="async" src="${L(c.logo)}" alt="">`:`<b>${c.b[0]}</b>`}</div><div><b>${c.b}</b><span>with BRANALL</span></div><span class="tag">${c.c==='F&B'?'F&amp;B':c.c}</span></div><div class="img"><img loading="lazy" src="${(c.img.startsWith('http')?c.img:W(c.img,800,800))}" alt="${c.b} ${c.cap.replace(/<[^>]+>/g,'')} 이미지"></div><div class="pf"><div class="icons">${IC}</div><div class="metric">${c.m}<small>${c.ms}</small></div><div class="cap">${c.cap}</div></div></article>`).join('');
 const moreBtn=document.getElementById('moreBtn');
