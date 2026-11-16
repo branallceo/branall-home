@@ -387,6 +387,7 @@ form.iq .btn[disabled]{opacity:.6;cursor:default;transform:none;box-shadow:none}
 <link rel="alternate" hreflang="ko" href="https://www.branall.co.kr/">
 <link rel="alternate" hreflang="en" href="https://www.branall.co.kr/en.html">
 <style>/* 1115: 바이럴 취급액 강조 */.chip.hl{background:#2b3cf04d;border-color:#6b79ff}.chip.hl span{white-space:nowrap;color:#e4e6ff}@media(max-width:900px){.chip.hl{flex:0 0 auto}}.chip.hl span i{font-style:normal;font-weight:800;color:#fff}</style>
+<style>/* 1116: 로고 띠 끊김 수정. 간격을 칸마다 붙여 한 바퀴 길이를 정확히 절반으로 맞추고, 터치 기기에서는 눌러도 멈추지 않게 함 */.ltrack{gap:0!important;will-change:transform;backface-visibility:hidden}.ltrack img{flex:0 0 auto;width:auto;margin-right:var(--lgap,80px)}@media(max-width:900px){.ltrack{--lgap:44px}}@keyframes mq{to{transform:translate3d(-50%,0,0)}}@media(hover:none){.logos:hover .ltrack{animation-play-state:running}}.wall .col{gap:0}.wall .col>.tile{margin-bottom:14px}</style>
 </head><body>
 <header><a class="logo en" href="#top" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
@@ -533,8 +534,10 @@ for(let c=0;c<ncol;c++){const col=document.createElement('div');col.className='c
 const LOGOW=[['오브제','img/clogo-01.webp'],['푸드올로지','img/clogo-02.webp'],['메디힐','img/clogo-03.webp'],['바이오던스','img/clogo-04.webp'],['비플레인','img/clogo-05.webp'],['파파레서피','img/clogo-06.webp'],['닥터바이오','img/clogo-07.webp'],['셀퓨전씨','img/clogo-08.webp'],['퍼셀','img/clogo-09.webp'],['언파','img/clogo-10.webp'],['라피타','img/clogo-11.webp'],['번개장터','img/clogo-12.webp'],['리필드','img/clogo-13.webp'],['익스트림','img/clogo-14.webp'],['하이트진로','img/clogo-15.webp'],['다비치','img/clogo-16.webp'],['리드볼트','img/clogo-17.webp'],['BOSE','img/clogo-18.webp'],['요아정','img/clogo-19.webp'],['푸라닭','img/clogo-20.webp'],['산청숯불가든','img/clogo-21.webp'],['샤브올데이','img/clogo-22.webp'],['더벤티','img/clogo-23.webp'],['청기와타운','img/clogo-24.webp'],['초이다이닝','img/clogo-25.webp'],['명랑핫도그','img/clogo-26.webp'],['파파존스','img/clogo-27.webp'],['페리카나','img/clogo-28.webp']];
 const SQ=['오브제','요아정','산청숯불가든','청기와타운'];
 const limg=l=>`<img loading="lazy" decoding="async" class="${SQ.includes(l[0])?'sq':''}" src="${l[1]}" alt="${l[0]} 로고" loading="lazy">`;
+const LSZ={"10":[500,140],"11":[612,140],"12":[458,123],"13":[442,130],"14":[461,121],"15":[515,131],"16":[433,129],"17":[720,113],"18":[720,123],"19":[113,113],"20":[466,106],"21":[236,183],"22":[436,70],"23":[630,148],"24":[275,188],"25":[184,40],"26":[483,134],"27":[593,145],"28":[348,131],"01":[506,204],"02":[474,73],"03":[720,138],"04":[581,134],"05":[328,132],"06":[673,165],"07":[392,138],"08":[720,137],"09":[665,150]};
+const mimg=l=>{const k=l[1].slice(-7,-5),z=LSZ[k]||[0,0];return `<img decoding="async" class="${SQ.includes(l[0])?'sq':''}" src="${l[1]}" width="${z[0]}" height="${z[1]}" alt="${l[0]} 로고">`};
 const half=Math.ceil(LOGOW.length/2);
-const r1=LOGOW.slice(0,half).map(limg).join(''),r2=LOGOW.slice(half).map(limg).join('');
+const r1=LOGOW.slice(0,half).map(mimg).join(''),r2=LOGOW.slice(half).map(mimg).join('');
 document.getElementById('lt1').innerHTML=r1+r1;document.getElementById('lt2').innerHTML=r2+r2;
 document.getElementById('clientgrid').innerHTML=LOGOW.map(l=>`<div>${limg(l)}<span>${l[0]}</span></div>`).join('')+`<div class="more"><b>200+</b>매년 함께하는 브랜드</div>`;
 // reference cards (포트폴리오 페이지 12개 사례, 수치는 사이트 원문 그대로)
