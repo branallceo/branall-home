@@ -144,7 +144,7 @@ src="https://www.facebook.com/tr?id=2556401924884115&ev=PageView&noscript=1"
   var el=e.target;
   if(el.matches('.pillars,.proc,.testi,.ins,#posts')){el.classList.add('stagger-in');cio.unobserve(el);return;}
   if(!done.has(el)){done.add(el);cu(el);cio.unobserve(el);}
- });},{threshold:.08});
+ });},{threshold:0,rootMargin:'0px 0px -8% 0px'});
  document.querySelectorAll('.chip b,.more b').forEach(function(el){cio.observe(el);});
  document.querySelectorAll('.pillars,.proc,.testi,.ins,#posts').forEach(function(el){cio.observe(el);});
 })();
