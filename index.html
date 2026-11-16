@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="ko"><head><!-- brn-utm --><script>(function(){try{var sp=new URLSearchParams(location.search),o={},n=0;['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','gclid'].forEach(function(k){var v=sp.get(k);if(v){o[k]=v.slice(0,300);n++}});if(n)sessionStorage.setItem('brn_utm',JSON.stringify(o))}catch(e){}})();</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>브랜올 BRANALL | 바이럴 · 인플루언서 · 숏폼 마케팅 에이전시</title>
 <meta name="description" content="브랜올은 인스타그램 파워페이지, 유튜브 쇼츠, X, 인플루언서 숏폼을 직접 운영하는 바이럴 마케팅 에이전시입니다. 바이럴 상품 중심 누적 취급액 100억+, 누적 콘텐츠 조회·노출 1.2억 회+, 누적 캠페인 15,000+, 연간 관리 브랜드 200개+.">
 <meta property="og:title" content="브랜올 BRANALL | 피드를 멈추게 하는 브랜드를 만듭니다">
@@ -504,7 +504,7 @@ if(!sv.length)er.services='관심 서비스를 1개 이상 선택해 주세요.'
 if(!f.elements.consent.checked)er.consent='개인정보 수집 및 이용에 동의해 주세요.';
 var keys=Object.keys(er);if(keys.length){show(er,'입력하지 않은 항목이 있습니다. 표시된 항목을 확인해 주세요.');var first=f.querySelector('[name="'+keys[0]+'"]');if(first)first.focus();return}
 show({},'');d.consent=true;d.page=f.getAttribute('data-page');d.page_url=location.href;if(document.referrer)d.referrer=document.referrer;d.website=f.elements.website.value;
-var sp=new URLSearchParams(location.search),utm={};['source','medium','campaign','term','content'].forEach(function(k){var v=sp.get('utm_'+k);if(v)utm[k]=v});['fbclid','gclid'].forEach(function(k){var v=sp.get(k);if(v)utm[k]=v});if(Object.keys(utm).length)d.utm=utm;
+var sp=new URLSearchParams(location.search),st={},utm={};try{st=JSON.parse(sessionStorage.getItem('brn_utm')||'{}')||{}}catch(e){}['source','medium','campaign','term','content'].forEach(function(k){var v=sp.get('utm_'+k)||st['utm_'+k];if(v)utm[k]=v});['fbclid','gclid'].forEach(function(k){var v=sp.get(k)||st[k];if(v)utm[k]=v});if(Object.keys(utm).length)d.utm=utm;
 busy=true;btn.disabled=true;var label=btn.textContent;btn.textContent='보내는 중…';
 fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json().catch(function(){return null}).then(function(j){return{r:r,j:j}})}).then(function(o){
 if(o.r.ok&&o.j&&o.j.ok){f.hidden=true;var done=document.getElementById('iqdone');done.hidden=false;done.focus();if(o.j.id&&!o.j.duplicate&&typeof window.fbq==='function'){try{fbq('track','Lead')}catch(e){}}}
