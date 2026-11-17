@@ -389,6 +389,7 @@ form.iq .btn[disabled]{opacity:.6;cursor:default;transform:none;box-shadow:none}
 <link rel="alternate" hreflang="en" href="https://www.branall.co.kr/en.html">
 <style>/* 1115: 바이럴 취급액 강조 */.chip.hl{background:#2b3cf04d;border-color:#6b79ff}.chip.hl span{white-space:nowrap;color:#e4e6ff}@media(max-width:900px){.chip.hl{flex:0 0 auto}}.chip.hl span i{font-style:normal;font-weight:800;color:#fff}</style>
 <style>/* 1116: 로고 띠 끊김 수정. 간격을 칸마다 붙여 한 바퀴 길이를 정확히 절반으로 맞추고, 터치 기기에서는 눌러도 멈추지 않게 함 */.ltrack{gap:0!important;will-change:transform;backface-visibility:hidden}.ltrack img{flex:0 0 auto;width:auto;margin-right:var(--lgap,80px)}@media(max-width:900px){.ltrack{--lgap:44px}}@keyframes mq{to{transform:translate3d(-50%,0,0)}}@media(hover:none){.logos:hover .ltrack{animation-play-state:running}}.wall .col{gap:0}.wall .col>.tile{margin-bottom:14px}</style>
+<style>/* 1117: 아이폰에서 입력칸을 누르면 화면이 확대되지 않게 16px */@media(max-width:900px){form.iq input,form.iq textarea,form.iq select{font-size:16px}}</style>
 </head><body>
 <header><a class="logo en" href="#top" aria-label="BRANALL 홈">BRANALL<sup>®</sup></a>
 <nav class="main"><a href="about.html">ABOUT</a><a href="reference.html">REFERENCE</a><a href="channels.html">CHANNELS</a><a href="contents.html">CONTENTS</a><a href="reels.html">REELS</a><a href="insight.html">INSIGHT</a></nav>
@@ -658,4 +659,5 @@ document.addEventListener('click', function(e){
  document.querySelectorAll('.chip b,.more b').forEach(function(el){cio.observe(el);});
  document.querySelectorAll('.pillars,.proc,.testi,.ins,#posts').forEach(function(el){cio.observe(el);});
 })();
-</script></body></html>
+</script><script>/* 1117: 주소에 #이 붙어 들어오면 카드가 다 그려진 뒤 다시 맞춤 */(function(){var h=location.hash;if(!h||h.length<2)return;function go(){try{var el=document.querySelector(h);if(el)el.scrollIntoView({behavior:"auto"})}catch(e){}}window.addEventListener("load",function(){setTimeout(go,120);setTimeout(go,900)})})();</script>
+</body></html>
